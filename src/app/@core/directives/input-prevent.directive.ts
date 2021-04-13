@@ -26,7 +26,7 @@ export class InputPreventDirective {
   }
 
   @HostListener('paste', ['$event']) onPaste(event:any) {
-    debugger
+   
     let regex=/[^!@#$%^&/A-Za-z1-9]/g;
     if (this.appInputPrevent === 'Arabic') {
         regex = /[^!@#$%^&/0-9\u0600-\u06ff\u0750-\u077f\ufb50-\ufbc1\ufbd3-\ufd3f\ufd50-\ufd8f\ufd50-\ufd8f\ufe70-\ufefc\uFDF0-\uFDFD]/g;
